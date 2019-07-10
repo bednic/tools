@@ -22,7 +22,7 @@ if (!function_exists('pluralize')) {
 if (!function_exists('formatBytes')) {
     function formatBytes(int $bytes, int $precision = 2): string
     {
-        $units = array('B', 'KB', 'MB', 'GB', 'TB');
+        $units = array('B', 'kB', 'MB', 'GB', 'TB');
         $bytes = max($bytes, 0);
         $pow = floor(($bytes ? log($bytes) : 0) / log(1000));
         $pow = min($pow, count($units) - 1);
