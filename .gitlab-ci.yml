@@ -1,0 +1,40 @@
+image: php:7.3
+
+stages:
+    - build
+    - test
+    - analyze
+
+build:
+    stage: build
+    script:
+        - composer -q install
+        - composer validate --no-check-all --strict
+    artifacts:
+        paths:
+            - vendor
+
+test:unit:
+    stage: test
+    script:
+        - vendor/bin/phpunit
+    artifacts:
+        paths:
+            - tmp
+
+code_sniffer:
+    stage: analyze
+    script:
+        - vendor/bin/phpcs
+
+sonar:
+    image: ciricihq/gitlab-sonar-scanner
+    stage: analyze
+    variables:
+        SONAR_URL: https://sonarcloud.io
+        SONAR_ANALYSIS_MODE: publish
+    script:
+        - gitlab-sonar-scanner
+    allow_failure: true
+    dependencies:
+        - test:unit
