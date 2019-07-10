@@ -37,4 +37,3 @@ if (!function_exists('floatValue')) {
         return floatval($val);
     }
 }
-
