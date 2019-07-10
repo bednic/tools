@@ -25,6 +25,9 @@
         "classmap": [
             "tests/"
         ],
+        "files": [
+            "src/functions.php"
+        ],
         "psr-4": {
             "Tools\\Test\\": "tests/"
         }

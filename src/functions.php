@@ -1,6 +1,5 @@
 <?php
 
-
 if (!function_exists('camelToKebab')) {
     function camelToKebab(string $string): string
     {
@@ -32,7 +31,7 @@ if (!function_exists('formatBytes')) {
 if (!function_exists('floatValue')) {
     function floatValue($val): float
     {
-        $val = str_replace(",", ".", $val);
+        $val = str_replace([",", " "], ".", $val);
         $val = preg_replace('/\.(?=.*\.)/', '', $val);
         return floatval($val);
     }
