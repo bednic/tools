@@ -13,6 +13,13 @@ class FunctionsTest extends TestCase
         $this->assertEquals('first-upper', camelToKebab('FirstUpper'));
     }
 
+    public function testCamelToSnake()
+    {
+        $this->assertTrue(function_exists('camelToSnake'));
+        $this->assertEquals('test_string', camelToSnake('testString'));
+        $this->assertEquals('first_upper', camelToSnake('FirstUpper'));
+    }
+
     public function testSlashToDot()
     {
         $this->assertTrue(function_exists('slashToDot'));

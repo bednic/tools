@@ -18,6 +18,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [0.1.0]
+
+### Added
+* `camelToSnake` function do from `camelCase` this `camel_case`
+
+### Changed
+* separate function to files, per function
+
+### Deprecated 
+
+### Fixed
+
+### Removed 
+
+### Security
+
 ## [0.0.1]
 
 ### Added
@@ -39,5 +55,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ---
-[Unreleased]: https://gitlab.com/bednic/json-api/compare/0.0.1...master
+[Unreleased]: https://gitlab.com/bednic/json-api/compare/0.1.0...master
+[0.0.1]: https://gitlab.com/bednic/json-api/compare/0.0.1...0.1.0
 [0.0.1]: https://gitlab.com/bednic/json-api/compare/0.0.1...0.0.1
